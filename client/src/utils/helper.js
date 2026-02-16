@@ -13,7 +13,7 @@ export const getInitials = (name) => {
         initials += words[i][0];
     }
 
-    return initials.tuUpperCase();
+    return initials.toUpperCase();
 };
 
 export const addThousandsSeparator = (num) => {

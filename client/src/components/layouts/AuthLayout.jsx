@@ -22,10 +22,10 @@ const AuthLayout = ({ children }) => {
                 />
             </div>
 
-            <img
+            {/* <img
                 src="https://plus.unsplash.com/premium_photo-1683980578016-a1f980719ec2?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                className="w-200 h-100 lg:w-[90%] absolute bottom-39 shadow-lg shadow-blue-400/15"
-            />
+                className="w-200 h-80 lg:w-[70%] absolute bottom-39 shadow-lg shadow-blue-400/15"
+            /> */}
         </div>
     </div>;
 };
