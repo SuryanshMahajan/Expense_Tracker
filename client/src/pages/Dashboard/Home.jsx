@@ -71,14 +71,14 @@ const Home = () => {
                     <InfoCard
                         icon={<LuHandCoins />}
                         label="Total Expense"
-                        value={addThousandsSeparator(dashboardData?.totalExpense || 0)}
+                        value={addThousandsSeparator(dashboardData?.totalExpenses || 0)}
                         color="bg-red-500"
                     />
                 </div>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-6'>
                     <RecentTransactions
-                        transactions={dashboardData?.RecentTransactions}
+                        transactions={dashboardData?.recentTransactions}
                         onSeeMore={() => navigate("/expense")}
                     />
 

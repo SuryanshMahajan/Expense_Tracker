@@ -3,13 +3,12 @@ import CustomBarChart from "../Charts/CustomBarChart";
 import { useEffect, useState } from "react";
 import { prepareIncomeBarChartData } from "../../utils/helper";
 
-const IncomeOverview = ({ transactions, incomeData }) => {
-    const [charData, setCharData] = useState([])
+const IncomeOverview = ({ transactions, onAddIncome }) => {
+    const [chartData, setCharData] = useState([]);
 
     useEffect(() => {
         const result = prepareIncomeBarChartData(transactions);
         setCharData(result);
-
         return () => { };
     }, [transactions]);
 
@@ -30,7 +29,7 @@ const IncomeOverview = ({ transactions, incomeData }) => {
             </div>
 
             <div className="mt-10">
-                <CustomBarChart data={charData} />
+                <CustomBarChart data={chartData} />
             </div>
         </div>
     )

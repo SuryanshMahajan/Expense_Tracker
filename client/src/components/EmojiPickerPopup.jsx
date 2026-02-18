@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import EmojiPicker from "emoji-picker-react";
-import { LuImage, Lux } from 'react-icons/lu';
+import { LuImage, LuX } from 'react-icons/lu';
 
 const EmojiPickerPopup = ({ icon, onSelect }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,7 @@ const EmojiPickerPopup = ({ icon, onSelect }) => {
                             className='w-7 h-7 flex items-center justify-center bg-white border border-gray-200 rounded-full absolute -top-2 -right-2 z-10 cursor-pointer'
                             onClick={() => setIsOpen(false)}
                         >
-                            <Lux />
+                            <LuX />
                         </button>
 
                         <EmojiPicker

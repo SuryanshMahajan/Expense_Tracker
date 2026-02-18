@@ -4,13 +4,11 @@ import {
     XAxis,
     CartesianGrid,
     Tooltip,
-    Legend,
     ResponsiveContainer,
     Cell
 } from "recharts";
-import CustomToolTip from "./CustomToolTip";
 
-const CustomBarChart = (data) => {
+const CustomBarChart = ({ data }) => {
 
     // Function to alternate colors
     const getBarColor = (index) => {
@@ -61,4 +59,4 @@ const CustomBarChart = (data) => {
     )
 }
 
-export default CustomBarChart
+export default CustomBarChart;

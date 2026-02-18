@@ -6,7 +6,7 @@ const COLORS = ["#875CF5", "#FA2C37", "#FF6900", "#4f39f6"];
 
 const RecentIncomeWithChart = ({ data, totalIncome }) => {
 
-    const [charData, setChartData] = useState([]);
+    const [chartData, setChartData] = useState([]);
 
     const prepareChartData = () => {
         const dataArr = data?.map((item) => ({
@@ -31,7 +31,7 @@ const RecentIncomeWithChart = ({ data, totalIncome }) => {
             </div>
 
             <CustomPieChart
-                data={charData}
+                data={chartData}
                 label="Total Income"
                 totalAmount={`$${totalIncome}`}
                 showTextAnchor
