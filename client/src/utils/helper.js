@@ -9,7 +9,7 @@ export const getInitials = (name) => {
     const words = name.split(" ");
     let initials = "";
 
-    for (let i= 0; i < Math.min(words.length, 2); i++) {
+    for (let i = 0; i < Math.min(words.length, 2); i++) {
         initials += words[i][0];
     }
 
@@ -23,6 +23,26 @@ export const addThousandsSeparator = (num) => {
     const formatInteger = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
     return fractionalPart
-    ? `${formatInteger}.${fractionalPart}`
-    : formatInteger;
+        ? `${formatInteger}.${fractionalPart}`
+        : formatInteger;
 };
+
+export const prepareExpenseBarChartData = (data = []) => {
+    const charData = data.map((item) => ({
+        category: item?.category,
+        amount: item?.amount,
+    }));
+
+    return charData;
+};
+
+export const prepareIncomeBarChartData = (data = []) => {
+    const sortedData = [...data].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    const charData = sortedData.map((item) => ({
+        month: moment(item?.date).format('Do MMM'),
+        amount: item?.amount,
+        source: item?.source,
+
+    }));
+}

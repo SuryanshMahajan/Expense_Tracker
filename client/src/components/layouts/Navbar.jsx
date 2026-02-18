@@ -10,9 +10,9 @@ const Navbar = ({ activeMenu }) => {
                 setOpenSideMenu(!openSideMenu);
             }}>
                 {openSideMenu ? (
-                    <HiOutlineMenu className="text-2xl" />
-                ) : (
                     <HiOutlineX className="text-2xl" />
+                ) : (
+                    <HiOutlineMenu className="text-2xl" />
                 )}
             </button>
 
