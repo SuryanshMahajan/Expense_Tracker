@@ -15,7 +15,7 @@ const RecentTransactions = ({ transactions, onSeeMore }) => {
 
             <div className="mt-6">
                 {transactions?.slice(0, 5)?.map((item) => {
-                    <TransactionInfoCard
+                    return <TransactionInfoCard
                         key={item._id}
                         title={item.type == 'expense' ? item.category : item.source}
                         icon={item.icon}

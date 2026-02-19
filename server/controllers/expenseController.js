@@ -57,7 +57,7 @@ exports.downloadExpenseExcel = async (req, res) => {
         const expense = await Expense.find({ userId }).sort({ date: -1 });
 
         // Prepare data for Excel
-        const data = Expense.map((item) => ({
+        const data = expense.map((item) => ({
             category: item.category,
             Amount: item.amount,
             Date: item.date,
@@ -69,6 +69,6 @@ exports.downloadExpenseExcel = async (req, res) => {
         xlsx.writeFile(wb, 'expense_details.xlsx');
         res.download('expense_details.xlsx');
     } catch (error) {
-        res.status(500).json({ message: "Server Error" });
+        res.status(500).json({ message: "Server Error", error });
     }
 };

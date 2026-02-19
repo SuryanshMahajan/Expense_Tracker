@@ -15,7 +15,7 @@ const ExpenseTransactions = ({transactions, onSeeMore}) => {
 
         <div className='mt-6'>
             {transactions?.slice(0.4)?.map((expense) => {
-                <TransactionInfoCard
+                return <TransactionInfoCard
                 key={expense._id}
                 title={expense.category}
                 icon={expense.icon}
