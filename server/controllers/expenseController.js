@@ -1,4 +1,3 @@
-const User = require("../models/user");
 const xlsx = require("xlsx");
 const Expense = require("../models/expense");
 

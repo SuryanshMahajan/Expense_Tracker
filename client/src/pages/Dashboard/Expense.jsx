@@ -21,7 +21,7 @@ const Expense = () => {
     });
     const [openAddExpenseModal, setOpenAddExpenseModal] = useState(false)
 
-    // Get All Income Details
+    // Get All Expense Details
     const fetchExpenseDetails = async () => {
         if (loading) return;
 
