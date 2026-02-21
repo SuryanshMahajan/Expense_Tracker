@@ -24,7 +24,7 @@ const EmojiPickerPopup = ({ icon, onSelect }) => {
                 </p>
 
                 {isOpen && (
-                    <div className='relative'>
+                    <div className='absolute top-14 right-0.5 md:relative md:top-0 md:right-0'>
                         <button
                             className='w-7 h-7 flex items-center justify-center bg-white border border-gray-200 rounded-full absolute -top-2 -right-2 z-10 cursor-pointer'
                             onClick={(e) => {

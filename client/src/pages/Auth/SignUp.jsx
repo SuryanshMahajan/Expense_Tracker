@@ -104,9 +104,9 @@ return (
                         placeholder="john@example.com"
                         type="text"
                     />
+                </div>
 
                     <div className="col-span-2">
-
                         <Input
                             value={password}
                             onChange={({ target }) => setPassword(target.value)}
@@ -116,8 +116,6 @@ return (
                         />
 
                     </div>
-
-                </div>
 
                 {error && <p className="text-red-500 text-xs pb-2.5">{error}</p>}
 
